@@ -1,0 +1,27 @@
+{
+    "name": "hbliang/shipping-manager",
+    "authors": [
+        {
+            "name": "Ben",
+            "email": "ishaobinliang@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hbliang\\ShippingManager\\Tests\\": "tests/",
+            "Hbliang\\ShippingManager\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "pimple/pimple": "^3.2",
+        "phpunit/phpunit": "^6.4",
+        "illuminate/support": "^5.5",
+        "symfony/event-dispatcher": "^3.3",
+        "monolog/monolog": "^1.23"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0"
+    },
+    "minimum-stability": "dev"
+}
