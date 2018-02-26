@@ -26,4 +26,9 @@ class ServiceProvider extends BaseServiceProvider
             __DIR__ . '/../config/shippingManager.php' => config_path('shippingManager.php')
         ]);
     }
+
+    public function provides()
+    {
+        return [ShippingManager::class];
+    }
 }
