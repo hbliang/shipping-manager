@@ -39,4 +39,22 @@ class ShippingManagerTest extends LaravelTestCase
         $this->assertTrue($validAddress->isValid());
         $this->assertFalse($invalidAddress->isValid());
     }
+
+    public function testValidateSingleAddress()
+    {
+        $shippingManager = $this->app->make(ShippingManager::class);
+
+        $validAddress = \Hbliang\ShippingManager\Entities\Address::factory([
+            'street' => '437 Baldwin Park Blvd',
+            'city' => 'City of Industry',
+            'state' => 'CA',
+            'postalCode' => '91746',
+            'country' => 'US',
+        ]);
+
+        $result = $shippingManager->validateAddresses([$validAddress]);
+
+        $this->assertNull($result);
+        $this->assertTrue($validAddress->isValid());
+    }
 }
